@@ -33,5 +33,11 @@ rsync -zhvr . ubuntu@54.160.236.91:/home/ubuntu/viraj/'''
       }
     }
 
+    stage('Start Application') {
+      steps {
+        sh 'ssh -t ubuntu@54.160.236.91 "cd /home/ubuntu/viraj/ && pm2 restart app.js"'
+      }
+    }
+
   }
 }
