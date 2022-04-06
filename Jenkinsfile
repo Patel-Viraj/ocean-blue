@@ -22,7 +22,8 @@ aws --version'''
 
     stage('copy to ec2') {
       steps {
-        sh 'rsync -zhvr . ubuntu@54.160.236.91:/home/ubuntu/viraj/'
+        sh '''pwd
+'''
       }
     }
 
