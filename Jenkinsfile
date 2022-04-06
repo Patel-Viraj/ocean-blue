@@ -13,7 +13,7 @@ pipeline {
         stage('version check') {
           steps {
             sh '''git --version
-aws --version'''
+                  aws --version'''
           }
         }
 
@@ -23,7 +23,7 @@ aws --version'''
     stage('copy to ec2') {
       steps {
         sh '''pwd
-rsync -zhvr . ubuntu@54.160.236.91:/home/ubuntu/viraj/'''
+              rsync -zhvr . ubuntu@54.160.236.91:/home/ubuntu/viraj/'''
       }
     }
 
