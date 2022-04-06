@@ -23,13 +23,13 @@ aws --version'''
     stage('copy to ec2') {
       steps {
         sh '''pwd
-'''
+rsync -zhvr . ubuntu@54.160.236.91:/home/ubuntu/viraj/'''
       }
     }
 
     stage('Install Packaged') {
       steps {
-        sh 'ssh -t ubuntu@54.160.236.91 \'cd /home/ubuntu/viraj && npm i\''
+        sh 'ssh -t ubuntu@54.160.236.91 \'pwd\''
       }
     }
 
