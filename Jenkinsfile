@@ -35,7 +35,7 @@ pipeline {
 
     stage('Start Application') {
       steps {
-        sh 'ssh -t ubuntu@3.239.180.46 "cd /home/ubuntu/viraj/ && pm2 restart app.js"'
+        sh 'pwd ssh -t ubuntu@3.239.180.46 "cd /home/ubuntu/viraj/" pwd'
       }
     }
 
