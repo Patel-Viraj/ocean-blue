@@ -23,7 +23,7 @@ pipeline {
     stage('copy to ec2') {
       steps {
         sh '''pwd
-ssh -t ubuntu@3.85.213.81
+ssh ubuntu@3.85.213.81
 
 '''
       }
