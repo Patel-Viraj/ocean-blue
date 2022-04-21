@@ -23,7 +23,7 @@ pipeline {
     stage('copy to ec2') {
       steps {
         sh '''pwd
-              rsync -zhvr . ubuntu@3.85.213.81:/home/ubuntu/viraj/'''
+rsync -zhvr . ubuntu@3.85.213.81:/home/ubuntu/viraj'''
       }
     }
 
