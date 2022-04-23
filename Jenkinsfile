@@ -22,20 +22,19 @@ pipeline {
 
     stage('copy to ec2') {
       steps {
-        sh '''rsync -zhvr . ubuntu@18.234.230.50:/home/ubuntu/viraj/
-'''
+        sh 'pwd'
       }
     }
 
     stage('Install Packaged') {
       steps {
-        sh 'ssh -t ubuntu@18.234.230.50 \'cd /home/ubuntu/viraj\' '
+        sh 'ssh -t ubuntu@18.234.230.50 \'cd /home/ubuntu/viraj && npm i\' '
       }
     }
 
     stage('Start Application') {
       steps {
-        sh 'ssh -t ubuntu@18.234.230.50 "cd /home/ubuntu/viraj/ && pwd" '
+        sh 'ssh -t ubuntu@18.234.230.50 "cd /home/ubuntu/viraj/ && pm2 restart" '
       }
     }
 
