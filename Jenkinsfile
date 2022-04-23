@@ -28,7 +28,7 @@ pipeline {
 
     stage('Install Packaged') {
       steps {
-        sh 'sudo ssh -t ubuntu@18.234.230.50 \'cd /home/ubuntu/viraj && npm i\' '
+        sh 'ssh -t ubuntu@18.234.230.50 \'cd /home/ubuntu/viraj && npm i\' '
       }
     }
 
